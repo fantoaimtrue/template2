@@ -17,9 +17,8 @@ WEBHOOK_PATH = ''
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 # webserver settings
-WEBAPP_HOST = 'localhost' # or ip
+WEBAPP_HOST = '127.0.0.1'  # or ip
 WEBAPP_PORT = 5000
-
 
 
 async def on_startup_notify(dp: Dispatcher):
@@ -31,7 +30,7 @@ async def on_startup_notify(dp: Dispatcher):
             pass
         except Exception as err:
             logging.exception(err)
-            
+
 
 ### Остановка бота
 async def on_shutdown(dp):
@@ -39,7 +38,7 @@ async def on_shutdown(dp):
 
     # Remove webhook (not acceptable in some cases)
     await bot.delete_webhook()
-    
+
     ngrok.disconnect(http_tunnel.public_url)
 
     logging.warning('Bye!')
