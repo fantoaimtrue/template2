@@ -1,5 +1,7 @@
 from aiogram.utils.executor import start_webhook
-from utils.notify_admins import WEBHOOK_PATH, on_shutdown, WEBAPP_HOST, WEBAPP_PORT
+
+from utils.notify_admins import WEBHOOK_PATH, on_shutdown, WEBAPP_HOST, \
+    WEBAPP_PORT
 
 
 async def on_startup(dp):
@@ -22,13 +24,14 @@ async def on_startup(dp):
 
     print('Готово')
 
-    from utils.notify_admins import on_startup_notify
-    await on_startup_notify(dp)
+    # from utils.notify_admins import on_startup_notify
+    # await on_startup_notify(dp)
 
-    # from utils.set_bot_commands import set_default_commands
-    # await set_default_commands(dp)
+    from utils.set_bot_commands import set_default_commands
+    await set_default_commands(dp)
 
     print('Bot was started')
+
 
 
 if __name__ == "__main__":
