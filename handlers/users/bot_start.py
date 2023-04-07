@@ -18,7 +18,7 @@ from loader import logging
 
 
 @rate_limit(limit=3)
-@dp.message_handler(IsPrivate(), text=['/start'])
+@dp.message_handler(text=['/start'])
 async def command_start(message: types.Message):
     try:
         user = await commands.select_users(message.from_user.id)
