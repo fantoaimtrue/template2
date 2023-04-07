@@ -14,7 +14,7 @@ from keyboards.sale_inline import sale_inline
 from keyboards.sale_inline import sale_aquarium
 from keyboards.sale_inline import sale_reptiles
 from keyboards.sale_inline import sale_pets
-from loader import logging
+# from loader import logging
 
 
 @rate_limit(limit=3)

@@ -1,13 +1,9 @@
-import datetime
-import logging
-from data import config
-
 from aiogram import Bot, types, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
+
+from data import config
 from utils.db_api.db_gino import db
-
-
 
 # #Настройки логирования
 # now = datetime.datetime.now()
