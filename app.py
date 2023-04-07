@@ -1,5 +1,4 @@
 from aiogram.utils.executor import start_polling
-
 from utils.notify_admins import on_shutdown
 
 
