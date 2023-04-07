@@ -16,7 +16,7 @@ services:
       - ./.env
     restart: always
     ports:
-      - '${WEBHOOK_PORT}:${WEBHOOK_PORT:-8000}'
+      - "8081:8081"
     depends_on:
         - db
 volumes:
