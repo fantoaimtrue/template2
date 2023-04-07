@@ -3,7 +3,7 @@ from loader import bot
 from aiogram import Dispatcher
 
 from data.config import admins
-from pyngrok import ngrok
+# from pyngrok import ngrok
 # from data.config import NGROK_TOKEN
 
 # подключение к серверу NGROK
@@ -37,8 +37,8 @@ async def on_shutdown(dp):
     logging.warning('Shutting down..')
 
     # Remove webhook (not acceptable in some cases)
-    await bot.delete_webhook()
+    # await bot.delete_webhook()
 
-    ngrok.disconnect(http_tunnel.public_url)
+    # ngrok.disconnect(http_tunnel.public_url)
 
     logging.warning('Bye!')
